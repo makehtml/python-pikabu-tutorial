@@ -1,7 +1,5 @@
-#!/Users/anton/GitHub/crost.spb/.venv/bin/python
-print('spam')
-
 def calc(x, y):
+    """Функция сложения."""
     z = x + y
     return z
 
