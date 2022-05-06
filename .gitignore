@@ -1,0 +1,11 @@
+__pycache__/
+/.idea/
+/.venv/
+/.vscode/
+/logs/
+/node_modules/
+*.pyc
+*.gz
+package-lock.json
+yarn.lock
+
