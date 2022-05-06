@@ -1,7 +1,6 @@
 def calc(x, y):
     """Функция сложения."""
-    z = x + y
-    return z
+    return x + y
 
 
 result = calc(55, 23)
