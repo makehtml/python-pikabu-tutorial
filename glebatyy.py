@@ -1,4 +1,4 @@
-from script0 import calc
+from utils import calc
 
 x = int(input("Введите первое число: "))
 y = int(input("Введите второе число: "))
