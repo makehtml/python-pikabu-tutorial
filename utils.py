@@ -17,5 +17,6 @@ def check_my_number(my_var_param, number_to_check):
     else:
         print(f"{my_var_param} равно {number_to_check}")
 
-my_var = 151
-check_my_number(my_var, 15)
+
+# my_var = 151
+# check_my_number(my_var, 15)
