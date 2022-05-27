@@ -1,3 +1,4 @@
 flask[async]
 flask-sqlalchemy
 flask-wtf
+scrapy
