@@ -1,3 +1,4 @@
+colorlog
 flask[async]
 flask-migrate
 flask-sqlalchemy
