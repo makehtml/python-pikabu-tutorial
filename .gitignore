@@ -3,6 +3,7 @@ __pycache__/
 /.venv/
 /.vscode/
 /logs/
+/navi_parser/out/
 /node_modules/
 .env
 *.pyc
