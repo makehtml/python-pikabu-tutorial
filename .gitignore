@@ -4,6 +4,7 @@ __pycache__/
 /.vscode/
 /logs/
 /node_modules/
+.env
 *.pyc
 *.gz
 package-lock.json
