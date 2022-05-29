@@ -46,6 +46,9 @@ def register_blueprints(app: Flask) -> None:
 
 
 def create_app():
+    """
+    Функция, которая создает приложение
+    """
     app = Flask(__name__)
     app.config.from_object(config[os.getenv("FLASK_ENV", "production")])
 
