@@ -1,3 +1,7 @@
+"""
+Here should be some docstring for routes.py
+It's blueprints for modules.
+"""
 bps = [
     {"module": "core", "view": "views", "name": "core"},
     # {"module": "core", "view": "admin_views", "name": "admin", "prefix": "/admin"},

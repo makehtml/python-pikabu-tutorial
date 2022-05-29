@@ -1,3 +1,6 @@
+"""
+Here should be some docstring for views.py
+"""
 from flask import Blueprint, render_template
 
 core = Blueprint("core", __name__, template_folder="templates")
