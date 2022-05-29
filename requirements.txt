@@ -1,0 +1,7 @@
+colorlog
+flask[async]
+flask-migrate
+flask-sqlalchemy
+flask-wtf
+python-dotenv
+scrapy
