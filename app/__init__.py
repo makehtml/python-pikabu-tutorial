@@ -1,3 +1,7 @@
+"""
+Here should be some docstring for __init__.py
+"""
+
 import importlib
 import logging
 import os
@@ -34,10 +38,10 @@ def register_extensions(app: Flask) -> None:
 def register_blueprints(app: Flask) -> None:
     """Регистрация роутов.
     """
-    for bp in bps:
-        bp_module = importlib.import_module(f"app.modules.{bp['module']}.{bp['view']}")
-        bp_instance = getattr(bp_module, bp["name"])
-        app.register_blueprint(bp_instance, url_prefix=bp.get("prefix", None))
+    for blueprint in bps:
+        blueprint_module = importlib.import_module(f"app.modules.{blueprint['module']}.{blueprint['view']}")
+        blueprint_instance = getattr(blueprint_module, blueprint["name"])
+        app.register_blueprint(blueprint_instance, url_prefix=blueprint.get("prefix", None))
 
 
 def create_app():
@@ -53,7 +57,6 @@ def create_app():
         # coloredlogs.install(level="DEBUG", logger=werkzeug_logger)
         # coloredlogs.install(level="DEBUG", logger=app.logger)
 
-
         logger = colorlog.getLogger(__name__)
         logger.addHandler(handler)
 
@@ -64,7 +67,8 @@ def create_app():
     if not os.path.exists("logs"):
         os.mkdir("logs")
     file_handler = RotatingFileHandler("logs/app.log", maxBytes=1048576, backupCount=10)
-    file_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]"))
+    file_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s:%(message)s "
+                                                "[in %(pathname)s:%(lineno)d]"))
     file_handler.setLevel(logging.DEBUG)
     app.logger.addHandler(file_handler)
     app.logger.setLevel(logging.DEBUG)
