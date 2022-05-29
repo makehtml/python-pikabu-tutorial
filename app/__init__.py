@@ -39,7 +39,8 @@ def register_blueprints(app: Flask) -> None:
     """Регистрация роутов.
     """
     for blueprint in bps:
-        blueprint_module = importlib.import_module(f"app.modules.{blueprint['module']}.{blueprint['view']}")
+        blueprint_module = importlib.import_module(
+            f"app.modules.{blueprint['module']}.{blueprint['view']}")
         blueprint_instance = getattr(blueprint_module, blueprint["name"])
         app.register_blueprint(blueprint_instance, url_prefix=blueprint.get("prefix", None))
 
