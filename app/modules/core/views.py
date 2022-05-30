@@ -6,4 +6,4 @@ core = Blueprint("core", __name__, template_folder="templates")
 @core.route("/index")
 @core.route("/")
 def index():
-    return 'OK'  # render_template("pages/index.j2")
+    return render_template("index.j2")
