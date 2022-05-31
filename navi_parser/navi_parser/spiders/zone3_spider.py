@@ -1,3 +1,7 @@
+"""
+Here should be described zone3_spider.py
+"""
+
 import scrapy
 
 

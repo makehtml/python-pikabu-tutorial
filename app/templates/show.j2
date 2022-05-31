@@ -1,0 +1,11 @@
+{% extends "base.j2" %}
+
+{% block content %}
+  <h1>Список сообщений</h1>
+  {% for message in messages %}
+    <article>
+      <h2>{{ message.title }} <small>{{ message.date }}</small></h2>
+      <p>{{ message.description|replace('\\n', '<br>') }}</p>
+    </article>
+  {% endfor %}
+{% endblock %}

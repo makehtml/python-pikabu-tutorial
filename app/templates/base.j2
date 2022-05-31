@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <title>
+    {% if title %}{{ title }} — {% else %}Добро пожаловать в {% endif %}NaviHelper
+  </title>
+</head>
+<body>
+  <header>
+    NaviHelper:
+    <a href="{{ url_for('core.index') }}">Главная</a>
+    <a href="{{ url_for('core.show') }}">Список сообщений</a>
+  </header>
+
+  <hr>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  {% block content %}{% endblock %}
+
+  <footer>
+  </footer>
+</body>
+</html>
