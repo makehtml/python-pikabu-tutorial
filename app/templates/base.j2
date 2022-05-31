@@ -2,13 +2,14 @@
 <html>
 <head>
   <title>
-    {% if title %}{{ title }} — {% else %}Welcome to {% endif %}NaviHelper
+    {% if title %}{{ title }} — {% else %}Добро пожаловать в {% endif %}NaviHelper
   </title>
 </head>
 <body>
   <header>
     NaviHelper:
-      <a href="#">Home</a>
+    <a href="{{ url_for('core.index') }}">Главная</a>
+    <a href="{{ url_for('core.show') }}">Список сообщений</a>
   </header>
 
   <hr>
